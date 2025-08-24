@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../public/fonts/SFPRODISPLAYREGULAR.OTF') format('opentype');
+  font-weight: 400; /* Regular weight */
+  font-style: normal;
+}
+
+
+@layer base {
+  :root {
+    --background: 218 23% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 218 23% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 218 23% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 14 88% 55%;
+    --primary-foreground: 218 23% 8%;
+
+    --secondary: 218 15% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 218 15% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 14 88% 55%;
+    --accent-foreground: 218 23% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 218 15% 20%;
+    --input: 218 15% 20%;
+    --ring: 14 88% 55%;
+
+    --radius: 0.75rem;
+
+    /* Industrial theme colors */
+    --industrial-orange: 14 88% 55%;
+    --industrial-red: 0 75% 50%;
+    --industrial-dark: 218 23% 8%;
+    --industrial-darker: 218 30% 5%;
+    --industrial-light: 0 0% 95%;
+    --industrial-muted: 0 0% 70%;
+
+    /* Custom button colors */
+    --button-primary: 240 62% 8%;
+    --button-gradient-start: 273 100% 72%;
+    --button-gradient-end: 0 0% 79%;
+
+    /* Grid pattern variables */
+    --grid-size: 80px;
+    --grid-color: 218 15% 12%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--industrial-darker)), hsl(var(--industrial-dark)));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--industrial-orange)), hsl(var(--industrial-red)));
+
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(var(--industrial-orange) / 0.3);
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--industrial-dark) / 0.5);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 218 23% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 14 88% 55%;
+    --sidebar-primary-foreground: 218 23% 8%;
+    --sidebar-accent: 218 15% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 218 15% 20%;
+    --sidebar-ring: 14 88% 55%;
+  }
+
+  .dark {
+    --background: 218 23% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 218 23% 8%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 218 23% 8%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 14 88% 55%;
+    --primary-foreground: 218 23% 8%;
+
+    --secondary: 218 15% 15%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 218 15% 15%;
+    --muted-foreground: 0 0% 70%;
+
+    --accent: 14 88% 55%;
+    --accent-foreground: 218 23% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 218 15% 20%;
+    --input: 218 15% 20%;
+    --ring: 14 88% 55%;
+    --sidebar-background: 218 23% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 14 88% 55%;
+    --sidebar-primary-foreground: 218 23% 8%;
+    --sidebar-accent: 218 15% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 218 15% 20%;
+    --sidebar-ring: 14 88% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .gradient-border {
+    position: relative;
+    background: #090920;
+    border: none;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 1.5px;
+    background: linear-gradient(90deg, #041C38 0%, #C9C9CA 100%);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: xor;
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+  }
+
+  .gradient-border-input {
+    background-color: transparent;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .gradient-border-input:focus-within {
+    border-color: transparent; /* Hide original border on focus */
+  }
+
+  .gradient-border-input:focus-within::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1.5px; /* Thinner line for input */
+    background: linear-gradient(90deg, #041C38 0%, #C9C9CA 100%);
+    pointer-events: none;
+  }
+
+  .custom-input-border {
+    background-color: transparent;
+    border: none; /* Remove default border */
+    border-bottom: 1px solid theme('colors.gray.700'); /* Initial bottom border */
+    position: relative;
+    transition: border-color 0.3s ease-in-out; /* Smooth transition for border-color */
+  }
+
+  .custom-input-border:focus,
+  .custom-input-border:focus-visible {
+    outline: none; /* Remove default focus outline */
+    border-color: transparent; /* Hide original bottom border on focus */
+    box-shadow: none; /* Remove any default box-shadow */
+  }
+
+  .custom-input-border:focus-within::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px; /* Thicker line for better glow visibility */
+    background: linear-gradient(90deg, #A968FF 0%, #C9C9CA 100%); /* Brighter gradient */
+    box-shadow: 0 0 8px 2px rgba(169, 104, 255, 0.6); /* Glow effect */
+    pointer-events: none;
+    animation: input-glow 0.8s infinite alternate; /* Subtle animation */
+  }
+
+  @keyframes input-glow {
+    from {
+      box-shadow: 0 0 8px 2px rgba(169, 104, 255, 0.3);
+    }
+    to {
+      box-shadow: 0 0 12px 3px rgba(169, 104, 255, 0.8);
+    }
+  }
+}
