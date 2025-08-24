@@ -8,6 +8,10 @@ const ProductGridSection = () => {
     id: i + 1,
     image: placeholderImage,
     title: "Special Bearing",
+    description: "Specialized bearing for precision instruments offering low noise and vibration.",
+    material: "Stainless Steel",
+    loadCapacity: "4300N",
+    dimensions: "47mm x 18mm"
   }));
 
   // Parent container animation for staggered effect
@@ -26,7 +30,7 @@ const ProductGridSection = () => {
       opacity: 1,
       scale: 1,
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" as any }, // ✅ type-safe fix
+      transition: { duration: 0.5, ease: "easeOut" as any },
     },
   };
 
@@ -58,15 +62,45 @@ const ProductGridSection = () => {
               className="relative group rounded-xl overflow-hidden border border-gray-700 p-3 sm:p-4 hover:border-gray-600 transition-colors duration-300"
               variants={itemVariants}
             >
-              <div className="aspect-square flex items-center justify-center mb-3 sm:mb-4">
-                <motion.img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-full object-cover rounded-md transition-transform duration-300 group-hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                />
+              {/* Image Container with Flip Effect */}
+              <div className="aspect-square flex items-center justify-center mb-3 sm:mb-4 relative" style={{ perspective: "1000px" }}>
+                <div className="w-full h-full relative transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+                  
+                  {/* Front Side - Image */}
+                  <motion.img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-full object-cover rounded-md absolute inset-0 backface-hidden"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  />
+
+                  {/* Back Side - Information */}
+                  <div className="absolute inset-0 backface-hidden rotate-y-180 bg-gray-800 rounded-md p-4 flex flex-col justify-center space-y-3">
+                    <div>
+                      <h4 className="text-lg font-semibold text-white mb-1 font-syne">
+                        Description
+                      </h4>
+                      <p className="text-gray-300 text-xs leading-relaxed">
+                        {product.description}
+                      </p>
+                    </div>
+                    
+                    <div>
+                      <h4 className="text-sm font-semibold text-white mb-1 font-syne">
+                        Information
+                      </h4>
+                      <div className="space-y-1 text-xs text-gray-300">
+                        <p><span className="text-white font-medium">Material:</span> {product.material}</p>
+                        <p><span className="text-white font-medium">Load Capacity:</span> {product.loadCapacity}</p>
+                        <p><span className="text-white font-medium">Dimensions:</span> {product.dimensions}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              {/* Title stays outside the flip container */}
               <h3 className="text-lg sm:text-xl font-semibold text-foreground text-center font-syne">
                 {product.title}
               </h3>
@@ -93,6 +127,21 @@ const ProductGridSection = () => {
           </motion.div>
         </motion.div>
       </div>
+
+      <style>{`
+        .transform-style-preserve-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;  
+        }
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+        .group:hover .group-hover\\:rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+      `}</style>
     </section>
   );
 };
