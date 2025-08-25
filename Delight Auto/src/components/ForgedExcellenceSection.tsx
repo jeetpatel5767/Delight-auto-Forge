@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import automotiveImage from "@/assets/automotive_shats.jpg";
 import railwayImage from "@/assets/railway_components.jpg";
-import industrialImage from "@/assets/industrial_gears.jpg";
+import industrialImage from "@/assets/customized-forgings.jpg";
 import customizedImage from "@/assets/customized_forgings.jpg";
 import { motion } from "framer-motion";
 import { fadeUp, fadeUpTween, staggerContainer } from "@/lib/animations";
