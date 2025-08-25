@@ -5,10 +5,11 @@ import { Input } from "@/components/ui/input";
 import { Facebook, Instagram, Twitter, ArrowUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/animations";
+import DFALogo from "../assets/DFA logo final 12x (1) 1.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-industrial-darker py-8 sm:py-10 lg:py-12">
+    <footer className="bg-[#2B2E3A] pt-8 sm:pt-10 lg:pt-12">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           variants={staggerContainer}
@@ -19,13 +20,13 @@ const Footer = () => {
         >
           {/* Left Side */}
           <motion.div variants={fadeUp} className="space-y-6 sm:space-y-8">
+            {/* Company Logo */}
             <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 bg-gradient-accent rounded-lg flex items-center justify-center">
-                <span className="text-xs sm:text-sm font-bold text-background">D</span>
-              </div>
-              <span className="text-lg sm:text-xl font-bold text-industrial-orange">
-                Delight auto Forge
-              </span>
+              <img
+                src={DFALogo}
+                alt="Delight Auto Forge"
+                className="w-42 sm:w-60 object-contain"
+              />
             </div>
 
             <p className="text-xs sm:text-sm text-industrial-orange uppercase font-SFProDisplay tracking-wider">
@@ -45,12 +46,26 @@ const Footer = () => {
             </p>
 
             <div className="space-y-1 sm:space-y-2 font-SFProDisplay">
-              <p className="text-sm sm:text-base text-industrial-muted">
+              <a
+                href="mailto:delightautoforge@gmail.com"
+                className="text-sm sm:text-base text-industrial-muted hover:text-[#37B39C] transition-colors"
+              >
                 delightautoforge@gmail.com
-              </p>
-              <p className="text-sm sm:text-base text-industrial-muted">
+              </a>
+              <a
+                href="tel:+919712377858"
+                className="text-sm sm:text-base text-industrial-muted hover:text-[#37B39C] transition-colors"
+              >
                 +91 9712377858
-              </p>
+              </a>
+              <a
+                href="https://www.google.com/maps?q=Delight+Auto+Forge"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm sm:text-base text-industrial-muted hover:text-[#37B39C] transition-colors"
+              >
+                View on Google Maps
+              </a>
             </div>
           </motion.div>
 
@@ -71,7 +86,7 @@ const Footer = () => {
             <Button
               variant="default"
               size="lg"
-              className="w-full sm:w-fit bg-success text-success-foreground hover:bg-success/90"
+              className="w-full sm:w-fit bg-[#37B39C] text-success-foreground hover:bg-success/90"
             >
               Send request
             </Button>
@@ -81,25 +96,25 @@ const Footer = () => {
               className="grid grid-cols-2 gap-6 sm:gap-8 mt-6 sm:mt-8"
             >
               <motion.div variants={fadeUp}>
-                <h3 className="text-industrial-orange uppercase tracking-wider font-semibold text-xs sm:text-sm mb-3 sm:mb-4">
+                <h3 className="text-[#37B39C] uppercase tracking-wider font-semibold text-xs sm:text-sm mb-3 sm:mb-4">
                   PAGES
                 </h3>
                 <div className="space-y-1 sm:space-y-2">
                   <a
                     href="#home"
-                    className="block text-sm text-industrial-muted hover:text-industrial-orange transition-colors font-SFProDisplay"
+                    className="block text-sm text-gray-400 hover:text-industrial-orange transition-colors font-SFProDisplay"
                   >
                     Home
                   </a>
                   <a
                     href="#products"
-                    className="block text-sm text-industrial-muted hover:text-industrial-orange transition-colors font-SFProDisplay"
+                    className="block text-sm text-gray-400 hover:text-industrial-orange transition-colors font-SFProDisplay"
                   >
                     Products
                   </a>
                   <a
                     href="#contact"
-                    className="block text-sm text-industrial-muted hover:text-industrial-orange transition-colors font-SFProDisplay"
+                    className="block text-sm text-gray-400 hover:text-industrial-orange transition-colors font-SFProDisplay"
                   >
                     Contact us
                   </a>
@@ -107,19 +122,19 @@ const Footer = () => {
               </motion.div>
 
               <motion.div variants={fadeUp}>
-                <h3 className="text-industrial-orange uppercase tracking-wider font-semibold text-xs sm:text-sm mb-3 sm:mb-4">
+                <h3 className="text-[#37B39C] uppercase tracking-wider font-semibold text-xs sm:text-sm mb-3 sm:mb-4">
                   INFORMATION
                 </h3>
                 <div className="space-y-1 sm:space-y-2">
                   <a
                     href="#about"
-                    className="block text-sm text-industrial-muted hover:text-industrial-orange transition-colors font-SFProDisplay"
+                    className="block text-sm text-gray-400 hover:text-industrial-orange transition-colors font-SFProDisplay"
                   >
                     About us
                   </a>
                   <a
                     href="#why-choose"
-                    className="block text-sm text-industrial-muted hover:text-industrial-orange transition-colors font-SFProDisplay"
+                    className="block text-sm text-gray-400 hover:text-industrial-orange transition-colors font-SFProDisplay"
                   >
                     Why choose us
                   </a>
@@ -128,54 +143,52 @@ const Footer = () => {
             </motion.div>
           </motion.div>
         </motion.div>
-
-        {/* Bottom Section */}
-        <motion.div
-          variants={fadeUp}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col sm:flex-row items-center justify-between mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 border-t border-gray-700 gap-4 sm:gap-0"
-        >
-          <div className="flex space-x-4 order-2 sm:order-1">
-            <a
-              href="#"
-              className="text-industrial-muted hover:text-industrial-orange transition-colors"
-            >
-              <Facebook size={20} className="sm:size-6" />
-            </a>
-            <a
-              href="#"
-              className="text-industrial-muted hover:text-industrial-orange transition-colors"
-            >
-              <Instagram size={20} className="sm:size-6" />
-            </a>
-            <a
-              href="#"
-              className="text-industrial-muted hover:text-industrial-orange transition-colors"
-            >
-              <Twitter size={20} className="sm:size-6" />
-            </a>
-          </div>
-
-          <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 order-1 sm:order-2">
-            <p className="text-industrial-muted text-xs sm:text-sm font-SFProDisplay text-center sm:text-left">
-              Design & Developed by{" "}
-              <span className="text-industrial-orange">
-                Codelix IT Solutions Pvt. Ltd.
-              </span>
-            </p>
-            <button
-              onClick={() =>
-                window.scrollTo({ top: 0, behavior: "smooth" })
-              }
-              className="text-industrial-muted hover:text-industrial-orange transition-colors"
-            >
-              <ArrowUp size={18} className="sm:size-5" />
-            </button>
-          </div>
-        </motion.div>
       </div>
+
+      {/* Bottom Section (full width white) */}
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        className="w-full bg-white flex flex-col sm:flex-row items-center justify-between mt-8 sm:mt-10 lg:mt-12 pt-6 sm:pt-8 px-4 sm:px-10 py-4 border-t border-gray-200"
+      >
+        <div className="flex space-x-4 order-2 sm:order-1">
+          <a
+            href="#"
+            className="text-gray-600 hover:text-[#37B39C] transition-colors"
+          >
+            <Facebook size={20} className="sm:size-6" />
+          </a>
+          <a
+            href="#"
+            className="text-gray-600 hover:text-[#37B39C] transition-colors"
+          >
+            <Instagram size={20} className="sm:size-6" />
+          </a>
+          <a
+            href="#"
+            className="text-gray-600 hover:text-[#37B39C] transition-colors"
+          >
+            <Twitter size={20} className="sm:size-6" />
+          </a>
+        </div>
+
+        <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 order-1 sm:order-2">
+          <p className="text-gray-600 text-xs sm:text-sm font-SFProDisplay text-center sm:text-left">
+            Design & Developed by{" "}
+            <span className="text-[#37B39C]">
+              Codelix IT Solutions Pvt. Ltd.
+            </span>
+          </p>
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="text-gray-600 hover:text-[#37B39C] transition-colors"
+          >
+            <ArrowUp size={18} className="sm:size-5" />
+          </button>
+        </div>
+      </motion.div>
     </footer>
   );
 };
