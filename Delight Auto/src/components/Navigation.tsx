@@ -3,6 +3,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import DFALogo from "../assets/DFA logo final 12x (1) 1.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,29 +14,47 @@ const Navigation = () => {
   return (
     <>
       {/* Desktop Navigation - Full Header */}
-      <nav className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-industrial-darker/95 backdrop-blur-sm border-b border-gray-800">
+      <nav className="hidden md:block fixed top-0 left-0 right-0 z-50">
         <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <span className="text-lg sm:text-xl font-bold text-industrial-orange">
-                Delight auto Forge
-              </span>
+              <img
+                src={DFALogo}
+                alt="Delight auto Forge Logo"
+                width={300}
+                height={100}
+              />
             </div>
 
             <div className="flex space-x-4 lg:space-x-6">
-              <a href="/" className="text-sm lg:text-base text-foreground hover:text-industrial-orange transition-colors">
+              <a
+                href="/"
+                className="text-sm lg:text-base text-foreground hover:text-industrial-orange transition-colors"
+              >
                 Home
               </a>
-              <a href="/services" className="text-sm lg:text-base text-foreground hover:text-industrial-orange transition-colors">
+              <a
+                href="/services"
+                className="text-sm lg:text-base text-foreground hover:text-industrial-orange transition-colors"
+              >
                 Services
               </a>
-              <a href="/products" className="text-sm lg:text-base text-foreground hover:text-industrial-orange transition-colors">
+              <a
+                href="/products"
+                className="text-sm lg:text-base text-foreground hover:text-industrial-orange transition-colors"
+              >
                 Products
               </a>
-              <a href="/about" className="text-sm lg:text-base text-foreground hover:text-industrial-orange transition-colors">
+              <a
+                href="/about"
+                className="text-sm lg:text-base text-foreground hover:text-industrial-orange transition-colors"
+              >
                 About
               </a>
-              <a href="/contact" className="text-sm lg:text-base text-foreground hover:text-industrial-orange transition-colors">
+              <a
+                href="/contact"
+                className="text-sm lg:text-base text-foreground hover:text-industrial-orange transition-colors"
+              >
                 Contact
               </a>
             </div>
@@ -82,13 +101,16 @@ const Navigation = () => {
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ type: "tween", duration: 0.4 }}
-                className="absolute top-0 right-0 h-full w-64 bg-industrial-darker/95 backdrop-blur-sm border-l border-gray-800"
+                className="absolute top-0 right-0 h-full w-64 bg-industrial-darker/95 backdrop-blur-sm"
               >
                 {/* Logo Section */}
-                <div className="p-6 border-b border-gray-800">
-                  <span className="text-lg font-bold text-industrial-orange">
-                    Delight auto Forge
-                  </span>
+                <div className="p-6">
+                  <img
+                    src={DFALogo}
+                    alt="Delight auto Forge Logo"
+                    width={150}
+                    height={40}
+                  />
                 </div>
 
                 {/* Navigation Links with stagger animation */}
@@ -108,20 +130,26 @@ const Navigation = () => {
                     },
                   }}
                 >
-                  {["Home", "Services", "Products", "About", "Contact"].map((item, idx) => (
-                    <motion.a
-                      key={idx}
-                      href={`/${item.toLowerCase() === "home" ? "" : item.toLowerCase()}`}
-                      className="block px-6 py-3 text-foreground hover:text-industrial-orange hover:bg-gray-800/50 transition-colors"
-                      onClick={closeMenu}
-                      variants={{
-                        hidden: { opacity: 0, x: 30 },
-                        show: { opacity: 1, x: 0 },
-                      }}
-                    >
-                      {item}
-                    </motion.a>
-                  ))}
+                  {["Home", "Services", "Products", "About", "Contact"].map(
+                    (item, idx) => (
+                      <motion.a
+                        key={idx}
+                        href={`/${
+                          item.toLowerCase() === "home"
+                            ? ""
+                            : item.toLowerCase()
+                        }`}
+                        className="block px-6 py-3 text-foreground hover:text-industrial-orange hover:bg-gray-800/50 transition-colors"
+                        onClick={closeMenu}
+                        variants={{
+                          hidden: { opacity: 0, x: 30 },
+                          show: { opacity: 1, x: 0 },
+                        }}
+                      >
+                        {item}
+                      </motion.a>
+                    )
+                  )}
                 </motion.div>
               </motion.div>
             </motion.div>

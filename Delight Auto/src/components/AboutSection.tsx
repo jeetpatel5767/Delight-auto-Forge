@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
-import aboutImage from "@/assets/about-brass-melting.jpg";
+import aboutImage from "@/assets/OMV_9273.png";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/animations";
+import { useNavigate } from "react-router-dom";
 
 const AboutSection = () => {
+  const navigate = useNavigate();
   return (
     <motion.section
       id="about"
@@ -26,7 +28,7 @@ const AboutSection = () => {
             <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elegant">
               <img
                 src={aboutImage}
-                alt="Hot melting brass rings in industrial foundry"
+                alt="Industrial machinery at Delight auto Forge"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -46,13 +48,13 @@ const AboutSection = () => {
             variants={staggerContainer}
           >
             <motion.div
-              className="flex items-center space-x-2 sm:space-x-3"
+              className="flex items-center space-x-4 sm:space-x-6"
               variants={fadeUp}
             >
-              <div className="relative w-6 h-6 sm:w-8 sm:h-8">
-                <div className="absolute inset-0 bg-white rounded-full"></div>
-                <div className="absolute inset-1 bg-black rounded-full"></div>
-              </div>
+              <div className="relative w-8 h-8 sm:w-10 sm:h-10">
+              <div className="absolute inset-0 bg-white rounded-full"></div>
+              <div className="absolute inset-2 bg-black rounded-full"></div>
+            </div>
               <span className="font-semibold tracking-wider font-SFProDisplay text-3xl sm:text-4xl lg:text-5xl">
                 About us
               </span>
@@ -84,6 +86,7 @@ const AboutSection = () => {
                 variant="hero"
                 size="lg"
                 className="text-base sm:text-lg px-6 sm:px-[25px] py-3 sm:py-[10px] hover:shadow-elegant transition-all duration-300 rounded-full font-normal"
+                onClick={() => navigate("/about")}
               >
                 Learn more →
               </Button>

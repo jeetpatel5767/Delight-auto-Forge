@@ -25,11 +25,19 @@ const ProductsPage = () => {
 
         {/* Hero Text */}
         <motion.div
-          className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto"
+          className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3"
           initial={{ opacity: 0, y: 50, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
         >
+          <div className="relative w-8 h-8 sm:w-10 sm:h-10">
+            <motion.div
+              className="absolute inset-0 bg-white rounded-full"
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            />
+            <div className="absolute inset-2 bg-black rounded-full"></div>
+          </div>
           <motion.h1
             className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground font-syne"
             initial={{ opacity: 0, y: 40 }}

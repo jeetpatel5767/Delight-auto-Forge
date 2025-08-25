@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-brass-components.jpg";
+import heroImage from "@/assets/HeroBG.jpg";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 // ✅ Shared animation helper (avoids typing errors)
 const fadeInUp = (delay = 0) => ({
@@ -17,6 +18,8 @@ const fadeInUp = (delay = 0) => ({
 });
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
   return (
     <section
       id="home"
@@ -27,8 +30,12 @@ const HeroSection = () => {
 
       {/* Background image overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ 
+          backgroundImage: `url(${heroImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
       ></div>
 
       {/* Content */}
@@ -41,14 +48,14 @@ const HeroSection = () => {
         >
           Forging Strength,
           <br />
-          <span className="text-industrial-orange">Shaping Excellence</span>
+          <span className="text-[#B54745]">Shaping Excellence</span>
         </motion.h1>
 
         <motion.p
           initial="hidden"
           animate="visible"
           variants={fadeInUp(0.3)}
-          className="text-base sm:text-lg md:text-xl lg:text-2xl text-industrial-muted mb-6 sm:mb-8 lg:mb-10 mx-auto leading-relaxed max-w-4xl px-2"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl text-industrial-muted mb-6 sm:mb-8 lg:mb-10 mx-auto leading-relaxed max-w-5xl px-2"
         >
           Precision Forged Components for Automotive, Railways, Agriculture, and
           Engineering Sectors.
@@ -63,6 +70,7 @@ const HeroSection = () => {
             variant="hero"
             size="lg"
             className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-[50.8px] py-3 sm:py-4 lg:py-[30.3px] hover:shadow-elegant transition-all duration-300 rounded-full font-normal w-full sm:w-auto max-w-xs sm:max-w-none"
+            onClick={() => navigate("/services")}
           >
             Get started
           </Button>

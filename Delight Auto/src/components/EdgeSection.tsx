@@ -1,5 +1,5 @@
-import { Check } from "lucide-react";
-import edgeImage from "@/assets/edge-worker.jpg";
+import tickIcon from "@/assets/Tick.png";
+import edgeImage from "@/assets/OMV_9297.png";
 import { motion, Variants, easeInOut } from "framer-motion";
 
 // Fade-up variant for text/items
@@ -37,16 +37,16 @@ const EdgeSection = () => {
       <div className="container mx-auto px-4 sm:px-6">
         {/* Heading */}
         <motion.div
-          className="flex items-center space-x-2 sm:space-x-3 mb-8 sm:mb-10 lg:mb-12"
+          className="flex items-center space-x-6 sm:space-x-8 mb-8 sm:mb-10 lg:mb-12"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeUpVariants}
         >
-          <div className="relative w-8 h-8 sm:w-10 sm:h-10">
-            <div className="absolute inset-0 bg-white rounded-full"></div>
-            <div className="absolute inset-2 bg-black rounded-full"></div>
-          </div>
+           <div className="relative w-10 h-10 sm:w-12 sm:h-12">
+              <div className="absolute inset-0 bg-white rounded-full"></div>
+              <div className="absolute inset-3.5 bg-black rounded-full"></div>
+            </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground font-SFProDisplay">
             Our Edge in the Industry
           </h2>
@@ -61,10 +61,10 @@ const EdgeSection = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={zoomInVariants}
           >
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elegant">
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden ">
               <img
                 src={edgeImage}
-                alt="Industrial worker operating forging equipment with safety gear"
+                alt="OMV 9297 heat-treated component"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -92,11 +92,11 @@ const EdgeSection = () => {
               {advantages.map((advantage, index) => (
                 <motion.div
                   key={index}
-                  className="flex items-center space-x-4 sm:space-x-6 lg:space-x-10"
+                  className="flex items-center space-x-6 sm:space-x-8 lg:space-x-12"
                   variants={fadeUpVariants}
                 >
-                  <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 bg-success/20 rounded-full flex items-center justify-center">
-                    <Check className="w-3 h-3 sm:w-4 sm:h-4 text-success" />
+                  <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 rounded-full overflow-hidden">
+                    <img src={tickIcon} alt="Tick" className="w-full h-full object-contain" />
                   </div>
                   <span className="text-sm sm:text-base lg:text-lg text-foreground font-medium">
                     {advantage}

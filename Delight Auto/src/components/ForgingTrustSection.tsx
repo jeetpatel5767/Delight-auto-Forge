@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import facilityImage from "@/assets/facility-building.jpg";
-import automotiveImage from "@/assets/automotive-shafts.jpg";
-import edgeWorkerImage from "@/assets/edge-worker.jpg";
-import industrialGearsImage from "@/assets/industrial-gears.jpg";
-import omv9297Image from "@/assets/OMV_9297.png";
+import automotiveImage from "@/assets/OMV_9201-1.png";
+import edgeWorkerImage from "@/assets/OMV_9285.png";
+import industrialGearsImage from "@/assets/OMV_9246 (1).png";
+import omv9297Image from "@/assets/OMV_9297-1.png";
 
 // ✅ Fix: helper with correct typing
 const fadeInUp = (delay = 0) => ({
@@ -45,14 +45,13 @@ const ForgingTrustSection = () => {
             src={omv9297Image}
             alt="Manufacturing Facility"
             className="w-full h-auto rounded-2xl object-cover shadow-lg"
-            style={{ clipPath: "polygon(0 0, 100% 0, 100% 90%, 0 100%)" }}
           />
         </motion.div>
 
         {/* Desktop layout */}
         <div className="hidden lg:flex items-center justify-center gap-4 w-full max-w-7xl mx-auto">
           {[
-            <div className="bg-success text-success-foreground p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-base h-[140px] w-[200px] flex-shrink-0">
+            <div className="bg-[#37B39C] text-success-foreground p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-base h-[140px] w-[200px] flex-shrink-0">
               <div>
                 ISO <br />
                 9001:2015 <br />
@@ -74,7 +73,7 @@ const ForgingTrustSection = () => {
               alt="CNC Manufacturing Process"
               className="w-full h-full object-cover"
             />,
-            <div className="bg-success text-success-foreground p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-base h-[140px] w-[200px] flex-shrink-0">
+            <div className="bg-[#37B39C] text-success-foreground p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-base h-[140px] w-[200px] flex-shrink-0">
               <div>
                 We processes over <br />
                 350 tons of steel <br />
@@ -102,7 +101,7 @@ const ForgingTrustSection = () => {
         {/* Mobile layout */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 lg:hidden">
           {[
-            <div className="bg-success text-success-foreground p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-xs sm:text-sm aspect-square">
+            <div className="bg-[#37B39C] text-success-foreground p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-xs sm:text-sm aspect-square">
               <div>
                 ISO <br />
                 9001:2015 <br />
@@ -124,7 +123,7 @@ const ForgingTrustSection = () => {
               alt="CNC Manufacturing Process"
               className="w-full h-full object-cover"
             />,
-            <div className="bg-success text-success-foreground p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-xs sm:text-sm aspect-square col-span-2 sm:col-span-1">
+            <div className="bg-[#37B39C] text-success-foreground p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-xs sm:text-sm aspect-square col-span-2 sm:col-span-1">
               <div>
                 We processes over <br />
                 350 tons of steel <br />

@@ -2,9 +2,9 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import certificateImage from "@/assets/certi.png";
-import manufacturingImage from "@/assets/edge-worker.jpg";
-import capacityImage from "@/assets/industrial-gears.jpg";
-import customizedForgingImage from "@/assets/customized-forgings.jpg";
+import manufacturingImage from "@/assets/OMV_9246 (1).png";
+import capacityImage from "@/assets/OMV_9273.png";
+import customizedForgingImage from "@/assets/OMV_9211-1.png";
 import timelyDeliveryImage from "@/assets/facility-building.jpg";
 import partnershipsImage from "@/assets/automotive-shafts.jpg";
 

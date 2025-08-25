@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import facilityImage from "@/assets/facility-building.jpg";
 import { motion, Variants, easeInOut } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const circleVariants: Variants = {
   hidden: { opacity: 0, scale: 0.8, y: 30 },
@@ -28,6 +29,7 @@ const contentVariants: Variants = {
 };
 
 const ReadySection = () => {
+  const navigate = useNavigate();
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-industrial-darker overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
@@ -55,6 +57,7 @@ const ReadySection = () => {
               variant="hero"
               size="lg"
               className="text-base sm:text-lg px-6 sm:px-[25px] py-3 sm:py-[10px] hover:shadow-elegant transition-all duration-300 rounded-full font-normal w-full sm:w-auto"
+              onClick={() => navigate("/contact")}
             >
               Contact us
             </Button>

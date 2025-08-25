@@ -1,12 +1,14 @@
 import { Button } from "@/components/ui/button";
-import automotiveImage from "@/assets/automotive-shafts.jpg";
-import railwayImage from "@/assets/railway-components.jpg";
-import industrialImage from "@/assets/industrial-gears.jpg";
-import customizedImage from "@/assets/customized-forgings.jpg";
+import automotiveImage from "@/assets/automotive_shats.jpg";
+import railwayImage from "@/assets/railway_components.jpg";
+import industrialImage from "@/assets/industrial_gears.jpg";
+import customizedImage from "@/assets/customized_forgings.jpg";
 import { motion } from "framer-motion";
 import { fadeUp, fadeUpTween, staggerContainer } from "@/lib/animations";
+import { useNavigate } from "react-router-dom";
 
 const ForgedExcellenceSection = () => {
+  const navigate = useNavigate();
   const products = [
     {
       title: "Automotive Shafts",
@@ -35,7 +37,7 @@ const ForgedExcellenceSection = () => {
       <div className="container mx-auto px-4 sm:px-6">
         {/* Title */}
         <motion.div
-          className="flex items-center space-x-2 sm:space-x-3 mb-8 sm:mb-10 lg:mb-12"
+          className="flex items-center space-x-5 sm:space-x-7 mb-8 sm:mb-10 lg:mb-12"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -91,6 +93,7 @@ const ForgedExcellenceSection = () => {
             variant="hero"
             size="lg"
             className="text-base sm:text-lg px-6 sm:px-[25px] py-3 sm:py-[10px] hover:shadow-elegant transition-all duration-300 rounded-full font-normal w-full sm:w-auto"
+            onClick={() => navigate("/products")}
           >
             Learn more →
           </Button>

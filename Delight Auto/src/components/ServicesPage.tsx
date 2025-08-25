@@ -4,10 +4,10 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
-import closedDieForgingImage from '@/assets/service-forging.jpg';
-import cncMachiningImage from '@/assets/service-machining.jpg';
-import shotBlastingImage from '@/assets/service-shotblasting.jpg';
-import heatTreatmentImage from '@/assets/service-annealing.jpg';
+import closedDieForgingImage from '@/assets/OMV_9255-1.png';
+import cncMachiningImage from '@/assets/OMV_9211-1.png';
+import shotBlastingImage from '@/assets/OMV_9201-1.png';
+import heatTreatmentImage from '@/assets/OMV_9278-1.png';
 
 const ServicesPage = () => {
   const services = [
@@ -66,7 +66,7 @@ const ServicesPage = () => {
             <div className="absolute inset-2 bg-black rounded-full"></div>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground font-syne">
-            Services
+            Our Services
           </h1>
         </motion.div>
       </motion.section>
@@ -100,7 +100,7 @@ const ServicesPage = () => {
                   <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-syne text-black">
                     {service.title}
                   </h2>
-                  <p className="text-sm sm:text-base lg:text-lg text-gray-700 font-SFProDisplay leading-relaxed">
+                  <p className="text-sm sm:text-base lg:text-lg text-[#373737] font-SFProDisplay leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -116,15 +116,7 @@ const ServicesPage = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-              <Button
-                variant="hero"
-                size="lg"
-                className="text-base sm:text-lg px-6 sm:px-[25px] py-3 sm:py-[10px] transition-all duration-300 rounded-full font-normal text-white bg-industrial-darker w-full sm:w-auto max-w-xs sm:max-w-none"
-              >
-                Learn more →
-              </Button>
-            </motion.div>
+            
           </motion.div>
         </div>
       </section>

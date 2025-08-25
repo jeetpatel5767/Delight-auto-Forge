@@ -1,39 +1,41 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import forgingImage from "@/assets/service-forging.jpg";
-import machiningImage from "@/assets/service-machining.jpg";
-import shotblastingImage from "@/assets/service-shotblasting.jpg";
-import annealingImage from "@/assets/service-annealing.jpg";
+import closedDieForgingImage from "@/assets/OMV_9255-1.png";
+import cncVmcImage from "@/assets/OMV_9211-1.png";
+import shotBlastingImage from "@/assets/OMV_9201-1.png";
+import heatTreatmentImage from "@/assets/OMV_9297-1.png";
 
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const ServicesSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const navigate = useNavigate();
 
   const services = [
     {
       title: "Closed Die Forging",
-      image: forgingImage,
+      image: closedDieForgingImage,
       alt: "Closed die forging process with hot metal being shaped",
     },
     {
       title: "CNS & VMC Machining",
-      image: machiningImage,
+      image: cncVmcImage,
       alt: "CNC and VMC machining center with precision cutting tools",
     },
     {
       title: "Shot Blasting",
-      image: shotblastingImage,
+      image: shotBlastingImage,
       alt: "Shot blasting equipment cleaning metal parts",
     },
     {
-      title: "Annealing",
-      image: annealingImage,
-      alt: "Annealing furnace with glowing hot metal components",
+      title: "Heat Treatment",
+      image: heatTreatmentImage,
+      alt: "Heat treatment process with glowing metal components",
     },
   ];
 
@@ -50,10 +52,10 @@ const ServicesSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="flex flex-col lg:flex-row lg:justify-between lg:items-center mb-8 sm:mb-12 lg:mb-16 space-y-6 lg:space-y-0"
         >
-          <div className="flex items-center space-x-2 sm:space-x-3">
-            <div className="relative w-8 h-8 sm:w-10 sm:h-10">
+          <div className="flex items-center space-x-5 sm:space-x-7">
+            <div className="relative w-10 h-10 sm:w-12 sm:h-12">
               <div className="absolute inset-0 bg-white rounded-full"></div>
-              <div className="absolute inset-2 bg-black rounded-full"></div>
+              <div className="absolute inset-3.5 bg-black rounded-full"></div>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground font-SFProDisplay">
               Our Services
@@ -99,7 +101,7 @@ const ServicesSection = () => {
               <motion.h3
                 whileHover={{ color: "#FF6A00", scale: 1.05 }}
                 transition={{ duration: 0.3 }}
-                className="text-lg sm:text-xl lg:text-2xl font-syne text-foreground text-center group-hover:text-industrial-orange transition-colors duration-300"
+                className="text-lg sm:text-xl lg:text-2xl font-syne !text-foreground text-center group-hover:!text-industrial-orange transition-colors duration-300"
               >
                 {service.title}
               </motion.h3>
@@ -118,6 +120,7 @@ const ServicesSection = () => {
             variant="hero"
             size="lg"
             className="text-base sm:text-lg px-6 sm:px-[25px] py-3 sm:py-[10px] hover:shadow-elegant transition-all duration-300 rounded-full font-normal w-full sm:w-auto max-w-xs sm:max-w-none"
+            onClick={() => navigate("/services")}
           >
             Learn more →
           </Button>

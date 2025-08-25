@@ -116,15 +116,7 @@ const ProductGridSection = () => {
           transition={{ duration: 0.6, ease: "easeOut" as any }}
           viewport={{ once: true }}
         >
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button
-              variant="hero"
-              size="lg"
-              className="text-base sm:text-lg px-6 sm:px-[25px] py-3 sm:py-[10px] hover:shadow-elegant transition-all duration-300 rounded-full font-normal w-full sm:w-auto max-w-xs sm:max-w-none"
-            >
-              Explore more
-            </Button>
-          </motion.div>
+          
         </motion.div>
       </div>
 

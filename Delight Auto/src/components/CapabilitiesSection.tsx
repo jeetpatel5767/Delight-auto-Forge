@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import factoryImage from "@/assets/automotive-shafts.jpg";
+import factoryImage from "@/assets/OMV_9246.png";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 const CapabilitiesSection = () => {
@@ -32,7 +32,8 @@ const CapabilitiesSection = () => {
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[400px] sm:min-h-[500px]">
             {/* Left Side: Image with Triangular Border */}
             <motion.div
-              className="relative h-[300px] sm:h-[350px] lg:h-[450px] order-2 lg:order-1"
+              className="relative h-[300px] sm:h-[350px] lg:h-[450px] order-2 lg:order-1 lg:-ml-[calc((100vw-100%)/2)]" 
+              // 👆 this pushes image flush to the left edge of the screen
               initial={{ opacity: 0, x: -120, scale: 0.9 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ type: "spring", stiffness: 80, damping: 20 }}
@@ -85,34 +86,17 @@ const CapabilitiesSection = () => {
               variants={staggerContainer}
             >
               {[
-                {
-                  label: "Maximum Height:",
-                  value: "90 mm",
-                },
-                {
-                  label: "Weight Capacity:",
-                  value: "0.500 kg to 15.000 kg",
-                },
-                {
-                  label: "Outer Diameter Range:",
-                  value: "100 mm to 300 mm",
-                },
-                {
-                  label: "Monthly Production Capacity:",
-                  value: "350 Metric Tons (MT)",
-                },
-                {
-                  label: "Manufacturing Type:",
-                  value: "Fully In-House Production Setup",
-                },
-                {
-                  label: "Industries Served:",
-                  value: "Automotive, Agriculture, Railways, and General Engineering",
-                },
+                { label: "Maximum Height:", value: "90 mm" },
+                { label: "Weight Capacity:", value: "0.500 kg to 15.000 kg" },
+                { label: "Outer Diameter Range:", value: "100 mm to 300 mm" },
+                { label: "Monthly Production Capacity:", value: "350 Metric Tons (MT)" },
+                { label: "Manufacturing Type:", value: "Fully In-House Production Setup" },
+                { label: "Industries Served:", value: "Automotive, Agriculture, Railways, and General Engineering" },
               ].map((item, i) => (
                 <motion.div
                   key={i}
                   className="flex items-start space-x-3 sm:space-x-4"
+                  style={{ paddingLeft: `${i * 20}px` }} // 👈 staggered indentation
                   variants={fadeUp}
                 >
                   <div className="w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>
