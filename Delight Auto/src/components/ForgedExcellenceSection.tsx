@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import automotiveImage from "@/assets/automotive_shats.jpg";
 import railwayImage from "@/assets/railway_components.jpg";
-import industrialImage from "@/assets/customized-forgings.jpg";
+import industrialImage from "@/assets/Industrial_gears.jpg";
 import customizedImage from "@/assets/customized_forgings.jpg";
 import { motion } from "framer-motion";
 import { fadeUp, fadeUpTween, staggerContainer } from "@/lib/animations";
@@ -43,10 +43,10 @@ const ForgedExcellenceSection = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <div className="relative w-8 h-8 sm:w-10 sm:h-10">
-            <div className="absolute inset-0 bg-white rounded-full"></div>
-            <div className="absolute inset-2 bg-black rounded-full"></div>
-          </div>
+          <div className="relative w-10 h-10 sm:w-12 sm:h-12">
+              <div className="absolute inset-0 bg-white rounded-full"></div>
+              <div className="absolute inset-3.5 bg-black rounded-full"></div>
+            </div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground font-SFProDisplay">
             Explore Our Forged Excellence
           </h2>

@@ -1,5 +1,5 @@
 import React from "react";
-import forgingProcessImage from "@/assets/service-forging.jpg";
+import forgingProcessImage from "@/assets/OMV_9255-1.png";
 import { motion } from "framer-motion";
 
 // ✅ Shared animation helper
@@ -44,7 +44,7 @@ const IndustriesSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeInUp(0.3)}
-          className="relative mb-8 sm:mb-12 lg:mb-16 overflow-hidden h-[180px] sm:h-[220px] lg:h-[250px]"
+          className="relative mb-8 sm:mb-12 lg:mb-16 overflow-hidden h-[240px] sm:h-[280px] lg:h-[350px]"
         >
           <img
             src={forgingProcessImage}

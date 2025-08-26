@@ -44,14 +44,14 @@ const ForgingTrustSection = () => {
           <img
             src={omv9297Image}
             alt="Manufacturing Facility"
-            className="w-full h-auto rounded-2xl object-cover shadow-lg"
+            className="w-full h-auto  object-cover shadow-lg"
           />
         </motion.div>
 
         {/* Desktop layout */}
         <div className="hidden lg:flex items-center justify-center gap-4 w-full max-w-7xl mx-auto">
           {[
-            <div className="bg-[#37B39C] text-success-foreground p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-base h-[140px] w-[200px] flex-shrink-0">
+            <div className="bg-[#37B39C] text-success-foreground p-4  flex flex-col items-center justify-center text-center font-bold text-base h-[140px] w-[200px] flex-shrink-0">
               <div>
                 ISO <br />
                 9001:2015 <br />
@@ -73,7 +73,7 @@ const ForgingTrustSection = () => {
               alt="CNC Manufacturing Process"
               className="w-full h-full object-cover"
             />,
-            <div className="bg-[#37B39C] text-success-foreground p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-base h-[140px] w-[200px] flex-shrink-0">
+            <div className="bg-[#37B39C] text-success-foreground p-4  flex flex-col items-center justify-center text-center font-bold text-base h-[140px] w-[200px] flex-shrink-0">
               <div>
                 We processes over <br />
                 350 tons of steel <br />
@@ -87,7 +87,7 @@ const ForgingTrustSection = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp(0.3 + i * 0.15)}
-              className={`relative rounded-xl overflow-hidden shadow-lg ${
+              className={`relative  overflow-hidden shadow-lg ${
                 i === 1 ? "h-[180px] w-[260px]" : ""
               } ${i === 2 ? "h-[220px] w-[320px]" : ""} ${
                 i === 3 ? "h-[180px] w-[260px]" : ""
@@ -101,7 +101,7 @@ const ForgingTrustSection = () => {
         {/* Mobile layout */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 lg:hidden">
           {[
-            <div className="bg-[#37B39C] text-success-foreground p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-xs sm:text-sm aspect-square">
+            <div className="bg-[#37B39C] text-success-foreground p-3 sm:p-4  flex flex-col items-center justify-center text-center font-bold text-xs sm:text-sm aspect-square">
               <div>
                 ISO <br />
                 9001:2015 <br />
@@ -123,7 +123,7 @@ const ForgingTrustSection = () => {
               alt="CNC Manufacturing Process"
               className="w-full h-full object-cover"
             />,
-            <div className="bg-[#37B39C] text-success-foreground p-3 sm:p-4 rounded-xl flex flex-col items-center justify-center text-center font-bold text-xs sm:text-sm aspect-square col-span-2 sm:col-span-1">
+            <div className="bg-[#37B39C] text-success-foreground p-3 sm:p-4  flex flex-col items-center justify-center text-center font-bold text-xs sm:text-sm aspect-square col-span-2 sm:col-span-1">
               <div>
                 We processes over <br />
                 350 tons of steel <br />
@@ -137,7 +137,7 @@ const ForgingTrustSection = () => {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeInUp(0.3 + i * 0.15)}
-              className="relative rounded-xl overflow-hidden shadow-lg"
+              className="relative  overflow-hidden shadow-lg"
             >
               {content}
             </motion.div>

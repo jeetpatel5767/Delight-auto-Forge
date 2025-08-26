@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import closedDieForgingImage from "@/assets/OMV_9255-1.png";
 import cncVmcImage from "@/assets/OMV_9211-1.png";
 import shotBlastingImage from "@/assets/OMV_9201-1.png";
-import heatTreatmentImage from "@/assets/OMV_9297-1.png";
+import heatTreatmentImage from "@/assets/OMV_9278-1.png";
 
 import { motion } from "framer-motion";
 import { useRef } from "react";

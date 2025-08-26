@@ -29,11 +29,10 @@ const CapabilitiesSection = () => {
 
         <div className="relative">
           {/* Main Content Grid */}
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[400px] sm:min-h-[500px]">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-0 items-center min-h-[400px] sm:min-h-[500px]">
             {/* Left Side: Image with Triangular Border */}
             <motion.div
               className="relative h-[300px] sm:h-[350px] lg:h-[450px] order-2 lg:order-1 lg:-ml-[calc((100vw-100%)/2)]" 
-              // 👆 this pushes image flush to the left edge of the screen
               initial={{ opacity: 0, x: -120, scale: 0.9 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ type: "spring", stiffness: 80, damping: 20 }}
@@ -82,7 +81,7 @@ const CapabilitiesSection = () => {
 
             {/* Right Side: Capabilities List */}
             <motion.div
-              className="space-y-6 sm:space-y-8 pl-0 lg:pl-8 order-1 lg:order-2"
+              className="space-y-6 sm:space-y-8 pl-0 lg:pl-6 order-1 lg:order-2"
               variants={staggerContainer}
             >
               {[

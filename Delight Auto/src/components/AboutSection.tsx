@@ -51,9 +51,9 @@ const AboutSection = () => {
               className="flex items-center space-x-4 sm:space-x-6"
               variants={fadeUp}
             >
-              <div className="relative w-8 h-8 sm:w-10 sm:h-10">
+              <div className="relative w-10 h-10 sm:w-12 sm:h-12">
               <div className="absolute inset-0 bg-white rounded-full"></div>
-              <div className="absolute inset-2 bg-black rounded-full"></div>
+              <div className="absolute inset-3.5 bg-black rounded-full"></div>
             </div>
               <span className="font-semibold tracking-wider font-SFProDisplay text-3xl sm:text-4xl lg:text-5xl">
                 About us

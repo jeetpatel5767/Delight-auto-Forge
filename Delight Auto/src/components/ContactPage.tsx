@@ -133,14 +133,16 @@ const ContactPage = () => {
               </h2>
               <div className="aspect-video bg-gray-800 rounded-xl overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps?q=Plot%20No.%201/41,%201/42,%20Survey%20No.253,%20Bhumi%20Industrial%20Area,%20National%20Highway%208B,%20Near%20Jigar%20Foundry,%20Shapar%20Veraval,%20Rajkot-360024,%20Gujarat,%20(India)&output=embed"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14835.826198522013!2d70.815785!3d22.297555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959b59eaa7cb42b%3A0xa0868ea5b2ae1ced!2sDelight%20Auto%20Forge!5e0!3m2!1sen!2sin!4v1692972975000!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
-                  loading="lazy"
                   allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
+
             </motion.div>
 
             {/* Form */}
