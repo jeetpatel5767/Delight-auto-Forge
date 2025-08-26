@@ -35,12 +35,16 @@ const Navigation = () => {
         <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <img
-                src={DFALogo}
-                alt="Delight auto Forge Logo"
-                width={300}
-                height={100}
-              />
+              {/* Clickable Logo */}
+              <a href="/" aria-label="Home">
+                <img
+                  src={DFALogo}
+                  alt="Delight Auto Forge Logo"
+                  width={300}
+                  height={100}
+                  className="cursor-pointer"
+                />
+              </a>
             </div>
 
             <div className="flex space-x-4 lg:space-x-6">
@@ -122,12 +126,15 @@ const Navigation = () => {
               >
                 {/* Logo Section */}
                 <div className="p-6">
-                  <img
-                    src={DFALogo}
-                    alt="Delight auto Forge Logo"
-                    width={150}
-                    height={40}
-                  />
+                  <a href="/" aria-label="Home" onClick={closeMenu}>
+                    <img
+                      src={DFALogo}
+                      alt="Delight Auto Forge Logo"
+                      width={150}
+                      height={40}
+                      className="cursor-pointer"
+                    />
+                  </a>
                 </div>
 
                 {/* Navigation Links */}

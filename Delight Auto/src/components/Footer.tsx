@@ -166,11 +166,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom White Section */}
-      <motion.div
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+      <div
         className="w-full bg-white flex flex-col sm:flex-row items-center justify-between pt-6 sm:pt-8 px-4 sm:px-10 py-4 border-t border-gray-200 relative z-20"
       >
         <div className="flex space-x-4 order-2 sm:order-1">
@@ -197,9 +193,15 @@ const Footer = () => {
         <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 order-1 sm:order-2">
           <p className="text-gray-600 text-xs sm:text-sm font-SFProDisplay text-center sm:text-left">
             Design & Developed by{" "}
-            <span className="text-[#37B39C]">
-              Codelix IT Solutions Pvt. Ltd.
-            </span>
+            <a 
+  href="https://www.codelix.in/" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="text-[#37B39C] hover:underline"
+>
+  Codelix IT Solutions Pvt. Ltd.
+</a>
+
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -208,7 +210,7 @@ const Footer = () => {
             <ArrowUp size={18} className="sm:size-5" />
           </button>
         </div>
-      </motion.div>
+      </div>
     </footer>
   );
 };

@@ -44,14 +44,13 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <section
         id="services-page-hero"
-        className="h-[120px] sm:h-[150px] md:h-[200px] relative flex items-center justify-center bg-industrial-darker mt-20"
+        className="h-[120px] sm:h-[150px] md:h-[200px] relative flex items-center justify-center bg-industrial-darker "
       >
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3">
-          <div className="relative w-8 h-8 sm:w-10 sm:h-10">
-            {/* Static Rings */}
-            <div className="absolute inset-0 bg-white rounded-full"></div>
-            <div className="absolute inset-2 bg-black rounded-full"></div>
-          </div>
+          <div className="relative w-10 h-10 sm:w-12 sm:h-12">
+              <div className="absolute inset-0 bg-white rounded-full"></div>
+              <div className="absolute inset-3.5 bg-black rounded-full"></div>
+            </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground font-syne">
             Our Services
           </h1>

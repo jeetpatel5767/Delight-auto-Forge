@@ -47,7 +47,7 @@ const CertificateSection = () => {
           <img
             src={certiImage}
             alt="Quality Certificate"
-            className="w-full max-w-xs sm:max-w-sm lg:max-w-full h-auto rounded-xl shadow-lg"
+            className="w-full max-w-xs sm:max-w-sm lg:max-w-full h-[1200px] rounded-xl shadow-lg"
           />
         </motion.div>
       </div>
