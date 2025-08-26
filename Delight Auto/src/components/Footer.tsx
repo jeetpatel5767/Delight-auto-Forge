@@ -6,7 +6,7 @@ import { Facebook, Instagram, Twitter, ArrowUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import DFALogo from "../assets/DFA logo final 12x (1) 1.png";
-import FooterCircle from "../assets/Footer circle shape.jpg";
+import FooterCircle from "../assets/footer circle shape.jpg";
 import FooterShape from "../assets/footer shape.jpg";
 
 const Footer = () => {
