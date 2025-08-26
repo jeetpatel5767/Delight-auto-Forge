@@ -42,60 +42,38 @@ const ServicesPage = () => {
       <Navigation />
 
       {/* Hero Section */}
-      <motion.section
+      <section
         id="services-page-hero"
-        className="h-[120px] sm:h-[150px] md:h-[200px] relative flex items-center justify-center bg-industrial-darker bg-grid-pattern bg-grid overflow-hidden"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="h-[120px] sm:h-[150px] md:h-[200px] relative flex items-center justify-center bg-industrial-darker mt-20"
       >
-        <div className="absolute inset-0 bg-grid-pattern bg-grid opacity-30"></div>
-
-        <motion.div
-          className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3"
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-        >
+        <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3">
           <div className="relative w-8 h-8 sm:w-10 sm:h-10">
-            <motion.div
-              className="absolute inset-0 bg-white rounded-full"
-              animate={{ scale: [1, 1.2, 1] }}
-              transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-            />
+            {/* Static Rings */}
+            <div className="absolute inset-0 bg-white rounded-full"></div>
             <div className="absolute inset-2 bg-black rounded-full"></div>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground font-syne">
             Our Services
           </h1>
-        </motion.div>
-      </motion.section>
+        </div>
+      </section>
 
       {/* Services Grid */}
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
             {services.map((service, index) => (
-              <motion.div
+              <div
                 key={index}
                 className="flex flex-col gap-4 sm:gap-6"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.03 }}
               >
-                <motion.div
-                  className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.4 }}
-                >
+                <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
                   <img
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover"
                   />
-                </motion.div>
+                </div>
                 <div className="w-full space-y-3 sm:space-y-4">
                   <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold font-syne text-black">
                     {service.title}
@@ -104,20 +82,9 @@ const ServicesPage = () => {
                     {service.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
-
-          {/* Button Animation */}
-          <motion.div
-            className="text-center mt-12 sm:mt-14 lg:mt-16"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            viewport={{ once: true }}
-          >
-            
-          </motion.div>
         </div>
       </section>
 

@@ -1,20 +1,37 @@
 "use client";
 
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import DFALogo from "../assets/DFA logo final 12x (1) 1.png";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
+  // Detect scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20); // adds blur when scrolled 20px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <>
-      {/* Desktop Navigation - Full Header */}
-      <nav className="hidden md:block fixed top-0 left-0 right-0 z-50">
+      {/* Desktop Navigation */}
+      <nav
+        className={`hidden md:block fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled
+            ? "backdrop-blur-md bg-white/50 shadow-sm" // Blur + translucent when scrolled
+            : "bg-transparent"
+        }`}
+      >
         <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
@@ -62,7 +79,7 @@ const Navigation = () => {
         </div>
       </nav>
 
-      {/* Mobile Navigation - Floating Round Button */}
+      {/* Mobile Navigation */}
       <div className="md:hidden">
         {/* Floating Menu Button */}
         <button
@@ -73,7 +90,7 @@ const Navigation = () => {
           {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
 
-        {/* Mobile Menu Overlay with Animations */}
+        {/* Mobile Menu Overlay */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -113,7 +130,7 @@ const Navigation = () => {
                   />
                 </div>
 
-                {/* Navigation Links with stagger animation */}
+                {/* Navigation Links */}
                 <motion.div
                   className="py-6 space-y-1"
                   initial="hidden"

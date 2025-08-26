@@ -6,24 +6,27 @@ import { Facebook, Instagram, Twitter, ArrowUp } from "lucide-react";
 import { motion } from "framer-motion";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 import DFALogo from "../assets/DFA logo final 12x (1) 1.png";
-import FooterCircle from "../assets/footer circle shape.jpg";
-import FooterShape from "../assets/footer shape.jpg";
+import FooterCircle from "../assets/shape-1.png";
+import FooterShape from "../assets/shape.png";
 
 const Footer = () => {
   return (
     <footer className="relative">
       {/* Background Section */}
-      <div className="relative bg-[#2B2E3A] pt-8 sm:pt-10 lg:pt-12 pb-10 sm:pb-14 lg:pb-16">
+      <div className="relative bg-[#2B2E3A] pt-8 sm:pt-10 lg:pt-12 pb-10 sm:pb-14 lg:pb-16 overflow-hidden">
         {/* Background Shapes */}
+        {/* Circle Shape (moved to top-right & higher) */}
         <img
           src={FooterCircle}
           alt="Footer Circle Shape"
-          className="absolute left-1/2 transform -translate-x-1/2 top-[35%] w-72 sm:w-96 opacity-20 pointer-events-none"
+          className="absolute right-0 top-[-5%] w-60 sm:w-80 opacity-40 pointer-events-none"
         />
+
+        {/* Other Shape (bottom left) */}
         <img
           src={FooterShape}
           alt="Footer Shape"
-          className="absolute left-0 bottom-8 sm:bottom-12 w-48 sm:w-64 opacity-20 pointer-events-none"
+          className="absolute left-0 bottom-16 sm:bottom-20 w-48 sm:w-64 opacity-40 pointer-events-none"
         />
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
@@ -155,7 +158,6 @@ const Footer = () => {
                       Why choose us
                     </a>
                   </div>
-
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -163,7 +165,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom White Section - now visible */}
+      {/* Bottom White Section */}
       <motion.div
         variants={fadeUp}
         initial="hidden"
