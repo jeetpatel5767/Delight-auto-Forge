@@ -9,38 +9,26 @@ const AboutSection = () => {
   return (
     <motion.section
       id="about"
-      className="py-12 sm:py-16 lg:py-20 bg-industrial-darker"
+      className="py-12 sm:py-16 lg:py-20 bg-[#060010]"
       variants={staggerContainer}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
           {/* Image */}
-          <motion.div
-            className="relative order-2 lg:order-1"
-            initial={{ opacity: 0, x: -100, scale: 0.9 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ type: "spring", stiffness: 80, damping: 20 }}
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elegant">
-              <img
-                src={aboutImage}
-                alt="Industrial machinery at Delight auto Forge"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            {/* Decorative frame */}
-            <motion.div
-              className="absolute -inset-2 sm:-inset-4 border-2 border-industrial-orange/20 rounded-3xl -z-10"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              viewport={{ once: true }}
-            ></motion.div>
-          </motion.div>
+<motion.img
+  src={aboutImage}
+  alt="Industrial machinery at Delight auto Forge"
+  className="order-2 lg:order-1 w-full h-[450px] sm:h-[500px] lg:h-[650px] object-cover object-center rounded-2xl"
+  initial={{ opacity: 0, scale: 0.95 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+  viewport={{ once: true }}
+/>
+
 
           {/* Content */}
           <motion.div
@@ -52,9 +40,9 @@ const AboutSection = () => {
               variants={fadeUp}
             >
               <div className="relative w-10 h-10 sm:w-12 sm:h-12">
-              <div className="absolute inset-0 bg-white rounded-full"></div>
-              <div className="absolute inset-3.5 bg-black rounded-full"></div>
-            </div>
+                <div className="absolute inset-0 bg-white rounded-full"></div>
+                <div className="absolute inset-3.5 bg-black rounded-full"></div>
+              </div>
               <span className="font-semibold tracking-wider font-SFProDisplay text-3xl sm:text-4xl lg:text-5xl">
                 About us
               </span>

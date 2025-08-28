@@ -25,7 +25,7 @@ const stagger: Variants = {
 
 const ContactPage = () => {
   return (
-    <div className="bg-industrial-darker text-foreground">
+    <div className="bg-[#060010] text-foreground">
       <Navigation />
 
       {/* Hero Section */}
@@ -60,7 +60,7 @@ const ContactPage = () => {
         </div>
       </motion.section>
 
-      <section className="py-12 sm:py-16 lg:py-20 bg-industrial-darker">
+      <section className="py-12 sm:py-16 lg:py-20 bg-[#060010]">
         <div className="container mx-auto px-4 sm:px-6">
           {/* Contact cards */}
           <motion.div

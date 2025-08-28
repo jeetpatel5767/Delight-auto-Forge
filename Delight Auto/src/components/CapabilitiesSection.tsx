@@ -6,7 +6,7 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 const CapabilitiesSection = () => {
   return (
     <motion.section
-      className="py-12 sm:py-16 lg:py-20 bg-industrial-darker relative overflow-hidden"
+      className="py-12 sm:py-16 lg:py-20 bg-[#060010] relative overflow-hidden"
       variants={staggerContainer}
       initial="hidden"
       whileInView="visible"
@@ -29,10 +29,10 @@ const CapabilitiesSection = () => {
 
         <div className="relative">
           {/* Main Content Grid */}
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-0 items-center min-h-[400px] sm:min-h-[500px]">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center min-h-[400px] sm:min-h-[500px]">
             {/* Left Side: Image with Triangular Border */}
             <motion.div
-              className="relative h-[300px] sm:h-[350px] lg:h-[450px] order-2 lg:order-1 lg:-ml-[calc((100vw-100%)/2)]" 
+              className="relative h-[300px] sm:h-[350px] lg:h-[450px] order-2 lg:order-1 lg:-ml-[calc((100vw-100%)/2)]"
               initial={{ opacity: 0, x: -120, scale: 0.9 }}
               whileInView={{ opacity: 1, x: 0, scale: 1 }}
               transition={{ type: "spring", stiffness: 80, damping: 20 }}
@@ -95,7 +95,10 @@ const CapabilitiesSection = () => {
                 <motion.div
                   key={i}
                   className="flex items-start space-x-3 sm:space-x-4"
-                  style={{ paddingLeft: `${i * 20}px` }} // 👈 staggered indentation
+                  // 👇 Only apply staggered indentation on lg+ screens
+                  style={{
+                    paddingLeft: window.innerWidth >= 1024 ? `${i * 20}px` : "0px",
+                  }}
                   variants={fadeUp}
                 >
                   <div className="w-2 h-2 bg-white rounded-full mt-2 sm:mt-3 flex-shrink-0"></div>

@@ -25,7 +25,7 @@ const IndustriesSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-industrial-darker">
+    <section className="py-12 sm:py-16 lg:py-20 bg-[#060010]">
       <div className="mx-auto px-0">
         {/* Heading */}
         <motion.h2

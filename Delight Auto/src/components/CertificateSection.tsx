@@ -3,11 +3,10 @@ import { motion } from "framer-motion";
 import certiImage from "@/assets/certi.png";
 
 const CertificateSection = () => {
-  // Text broken into letters for vertical layout
   const verticalText = "QUALITY & CERTIFICATE".split("");
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-industrial-darker">
+    <section className="py-12 sm:py-16 lg:py-20 bg-[#060010]">
       <div className="container mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center justify-center">
         {/* Left Side */}
         <motion.div
@@ -18,13 +17,18 @@ const CertificateSection = () => {
           transition={{ duration: 0.9, ease: "easeOut" }}
         >
           {/* Rings */}
-          <div className="relative w-12 h-12 sm:w-14 sm:h-14 mb-6">
+          <div className="relative w-10 h-10 sm:w-12 sm:h-12">
             <div className="absolute inset-0 bg-white rounded-full"></div>
-            <div className="absolute inset-3 bg-black rounded-full"></div>
+            <div className="absolute inset-3.5 bg-black rounded-full"></div>
           </div>
 
-          {/* Vertical Text */}
-          <div className="flex flex-col items-center space-y-2">
+          {/* Mobile: Normal horizontal heading */}
+          <h2 className="mt-6 text-white text-2xl sm:text-3xl font-extrabold font-SFProDisplay tracking-wide lg:hidden">
+            QUALITY & CERTIFICATE
+          </h2>
+
+          {/* Desktop: Vertical text */}
+          <div className="hidden lg:flex flex-col items-center space-y-2 mt-6">
             {verticalText.map((char, i) => (
               <span
                 key={i}

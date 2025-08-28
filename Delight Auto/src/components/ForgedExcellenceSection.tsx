@@ -33,22 +33,27 @@ const ForgedExcellenceSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-industrial-darker">
+    <section className="py-12 sm:py-16 lg:py-20 bg-[#060010]">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Title */}
         <motion.div
-          className="flex items-center space-x-5 sm:space-x-7 mb-8 sm:mb-10 lg:mb-12"
+          className="flex flex-wrap items-center gap-4 sm:gap-6 mb-8 sm:mb-10 lg:mb-12"
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
+          {/* Fixed Circle */}
           <div className="relative w-10 h-10 sm:w-12 sm:h-12">
               <div className="absolute inset-0 bg-white rounded-full"></div>
               <div className="absolute inset-3.5 bg-black rounded-full"></div>
             </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground font-SFProDisplay">
-            Explore Our Forged Excellence
+
+          {/* Heading with responsive line break */}
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground font-SFProDisplay leading-tight">
+            Explore Our
+            <br className="block sm:hidden" />
+            <span className="sm:inline"> Forged Excellence</span>
           </h2>
         </motion.div>
 

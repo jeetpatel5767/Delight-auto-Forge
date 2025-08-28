@@ -31,7 +31,7 @@ const contentVariants: Variants = {
 const ReadySection = () => {
   const navigate = useNavigate();
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-industrial-darker overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#060010] overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
@@ -73,30 +73,25 @@ const ReadySection = () => {
               whileInView="visible"
               viewport={{ once: true }}
             />
+
             <motion.div
-              className="absolute w-[220px] sm:w-[350px] md:w-[500px] lg:w-[650px] h-[220px] sm:h-[350px] md:h-[500px] lg:h-[650px] border border-gray-700/40 rounded-full"
+              className="absolute w-[200px] sm:w-[320px] md:w-[470px] lg:w-[620px] h-[200px] sm:h-[320px] md:h-[470px] lg:h-[620px] border border-gray-700/40 rounded-full"
               variants={circleVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 1.2, ease: easeInOut }}
             />
+
             <motion.div
-              className="absolute w-[150px] sm:w-[250px] md:w-[350px] lg:w-[450px] h-[150px] sm:h-[250px] md:h-[350px] lg:h-[450px] border border-gray-700/30 rounded-full"
+              className="absolute w-[120px] sm:w-[220px] md:w-[330px] lg:w-[440px] h-[120px] sm:h-[220px] md:h-[330px] lg:h-[440px] border border-gray-700/30 rounded-full"
               variants={circleVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 1.2, ease: easeInOut }}
             />
-            <motion.div
-              className="absolute w-[100px] sm:w-[160px] md:w-[220px] lg:w-[300px] h-[100px] sm:h-[160px] md:h-[220px] lg:h-[300px] border border-gray-700/30 rounded-full"
-              variants={circleVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              transition={{ delay: 0.6, duration: 1.2, ease: easeInOut }}
-            />
+
 
             {/* Central Image */}
             <motion.div

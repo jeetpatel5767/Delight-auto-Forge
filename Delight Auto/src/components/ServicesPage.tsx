@@ -38,13 +38,13 @@ const ServicesPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-industrial-darker text-foreground">
+    <div className="min-h-screen bg-[#060010] text-foreground">
       <Navigation />
 
       {/* Hero Section */}
       <section
         id="services-page-hero"
-        className="h-[120px] sm:h-[150px] md:h-[200px] relative flex items-center justify-center bg-industrial-darker "
+        className="h-[120px] sm:h-[150px] md:h-[200px] relative flex items-center justify-center bg-[#060010] "
       >
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3">
           <div className="relative w-10 h-10 sm:w-12 sm:h-12">

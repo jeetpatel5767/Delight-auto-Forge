@@ -65,7 +65,7 @@ const WhyChooseUsSection = () => {
   ];
 
   return (
-    <section id = "Why-us" className="py-12 sm:py-16 lg:py-20 bg-industrial-darker">
+    <section id = "Why-us" className="py-12 sm:py-16 lg:py-20 bg-[#060010]">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.h2
           className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground font-syne text-center mb-8 sm:mb-12 lg:mb-16"

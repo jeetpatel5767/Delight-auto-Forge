@@ -128,7 +128,7 @@ const ProductGridSection = () => {
   };
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-industrial-darker">
+    <section className="py-12 sm:py-16 lg:py-20 bg-[#060010]">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Title */}
         <motion.h2

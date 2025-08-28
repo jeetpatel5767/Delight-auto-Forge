@@ -12,7 +12,7 @@ import { fadeUp } from "../lib/animations"; // ✅ only keeping what we use
 
 const AboutPage = () => {
   return (
-    <div className="bg-industrial-darker text-foreground">
+    <div className="bg-[#060010] text-foreground">
       <Navigation />
 
       {/* Hero Section */}

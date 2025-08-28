@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const ProductsPage = () => {
   return (
-    <div className="bg-industrial-darker text-foreground overflow-hidden">
+    <div className="bg-[#060010] text-foreground overflow-hidden">
       <Navigation />
 
       {/* Hero Section */}
