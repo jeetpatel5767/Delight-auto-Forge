@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const VisionMissionSection = () => {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-[#060010] overflow-hidden">
+    <section className="py-12 sm:py-6 lg:py-10 bg-[#060010] overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
         {/* Heading */}
         <motion.h2

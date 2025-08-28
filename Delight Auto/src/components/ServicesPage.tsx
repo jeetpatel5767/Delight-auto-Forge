@@ -46,15 +46,27 @@ const ServicesPage = () => {
         id="services-page-hero"
         className="h-[120px] sm:h-[150px] md:h-[200px] relative flex items-center justify-center bg-[#060010] "
       >
-        <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3">
-          <div className="relative w-10 h-10 sm:w-12 sm:h-12">
-              <div className="absolute inset-0 bg-white rounded-full"></div>
-              <div className="absolute inset-3.5 bg-black rounded-full"></div>
-            </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground font-syne">
-            Our Services
-          </h1>
-        </div>
+        <motion.div
+                  className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3 mt-5"
+                  initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  transition={{ duration: 1.2, ease: "easeOut" }}
+                >
+                  {/* Static Rings (no animation) */}
+                  <div className="relative w-10 h-10 sm:w-12 sm:h-12">
+                      <div className="absolute inset-0 bg-white rounded-full"></div>
+                      <div className="absolute inset-3.5 bg-black rounded-full"></div>
+                    </div>
+        
+                  <motion.h1
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground font-syne"
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                  >
+                    Our Services
+                  </motion.h1>
+                </motion.div>
       </section>
 
       {/* Services Grid */}

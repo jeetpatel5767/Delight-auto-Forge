@@ -65,7 +65,7 @@ const Navigation = () => {
                     <Link
                       key={item}
                       to={href}
-                      className={`text-sm lg:text-base transition-colors ${
+                      className={`text-sm lg:text-lg transition-colors ${
                         isActive
                           ? "text-[#B54745]"
                           : "text-foreground hover:text-[#B54745]"

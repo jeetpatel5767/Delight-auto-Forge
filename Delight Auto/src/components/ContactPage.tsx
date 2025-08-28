@@ -37,22 +37,27 @@ const ContactPage = () => {
         transition={{ duration: 0.9, ease: "easeOut" }}
       >
         <div className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto">
-          <motion.div 
-            className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3 mt-20"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
-          >
-            {/* Static rings (no animation) */}
-            <div className="relative w-10 h-10 sm:w-12 sm:h-12">
-              <div className="absolute inset-0 bg-white rounded-full"></div>
-              <div className="absolute inset-3.5 bg-black rounded-full"></div>
-            </div>
-
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground font-syne">
-              Contact Us
-            </h1>
-          </motion.div>
+          <motion.div
+                    className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3 mt-20"
+                    initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    transition={{ duration: 1.2, ease: "easeOut" }}
+                  >
+                    {/* Static Rings (no animation) */}
+                    <div className="relative w-10 h-10 sm:w-12 sm:h-12">
+                        <div className="absolute inset-0 bg-white rounded-full"></div>
+                        <div className="absolute inset-3.5 bg-black rounded-full"></div>
+                      </div>
+          
+                    <motion.h1
+                      className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground font-syne"
+                      initial={{ opacity: 0, y: 40 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+                    >
+                      Contact
+                    </motion.h1>
+                  </motion.div>
 
           <p className="mt-3 sm:mt-4 text-industrial-muted text-base sm:text-lg font-SFProDisplay">
             Any Question or remarks? Just write us a message!
@@ -129,7 +134,7 @@ const ContactPage = () => {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground font-syne mb-8 sm:mb-10 lg:mb-12">
                 Get in touch
               </h2>
-             <div className="bg-gray-800 rounded-xl overflow-hidden h-[550px]">
+             <div className="bg-gray-800 rounded-xl overflow-hidden h-[525px]">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14835.826198522013!2d70.815785!3d22.297555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959b59eaa7cb42b%3A0xa0868ea5b2ae1ced!2sDelight%20Auto%20Forge!5e0!3m2!1sen!2sin!4v1692972975000!5m2!1sen!2sin"
     width="100%"
