@@ -44,7 +44,7 @@ const HeroSection = () => {
           initial="hidden"
           animate="visible"
           variants={fadeInUp(0.1)}
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight font-syne"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#B54745] mb-4 sm:mb-6 leading-tight font-syne"
         >
           Forging Strength,
           <br />

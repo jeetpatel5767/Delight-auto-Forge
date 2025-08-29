@@ -44,10 +44,10 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <section
         id="services-page-hero"
-        className="h-[120px] sm:h-[150px] md:h-[200px] relative flex items-center justify-center bg-[#060010] "
+        className="h-[120px] sm:h-[150px] md:h-[250px] relative flex items-center justify-center bg-[#060010] "
       >
         <motion.div
-                  className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3 mt-5"
+                  className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3 mt-[25px]"
                   initial={{ opacity: 0, y: 50, scale: 0.95 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   transition={{ duration: 1.2, ease: "easeOut" }}
