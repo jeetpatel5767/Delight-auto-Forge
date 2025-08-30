@@ -44,7 +44,7 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <section
         id="services-page-hero"
-        className="h-[120px] sm:h-[150px] md:h-[250px] relative flex items-center justify-center bg-[#060010] "
+        className="h-[170px] sm:h-[150px] md:h-[250px] relative flex items-center justify-center bg-[#060010] "
       >
         <motion.div
                   className="relative z-10 text-center px-4 sm:px-6 max-w-6xl mx-auto flex items-center justify-center space-x-2 sm:space-x-3 mt-[25px]"
